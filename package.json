@@ -7,7 +7,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:analyze": "npm run build && npx serve -s build -l 3000",
-    "build:production": "cross-env GENERATE_SOURCEMAP=false npm run build",
+    "build:production": "npm run build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
