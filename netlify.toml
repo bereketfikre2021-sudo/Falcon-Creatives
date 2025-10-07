@@ -52,5 +52,5 @@
   skip_processing = false
 
 # Functions (if needed)
-[functions]
-  directory = "netlify/functions"
+# [functions]
+#   directory = "netlify/functions"

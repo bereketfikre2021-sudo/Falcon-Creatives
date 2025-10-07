@@ -7,7 +7,6 @@ import {
   Card,
   CardContent,
   IconButton,
-  Modal,
   Dialog,
   DialogTitle,
   DialogContent,

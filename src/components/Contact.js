@@ -82,6 +82,7 @@ const Contact = () => {
         throw new Error('Failed to send message');
       }
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Form submission error:', error);
       setSnackbar({
         open: true,

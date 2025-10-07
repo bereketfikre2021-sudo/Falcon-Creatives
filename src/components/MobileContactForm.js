@@ -4,12 +4,9 @@ import {
   TextField,
   Button,
   Typography,
-  useTheme,
-  useMediaQuery,
   Alert,
   Snackbar,
   InputAdornment,
-  IconButton,
 } from '@mui/material';
 import {
   Person,
@@ -17,21 +14,16 @@ import {
   Subject,
   Message,
   Send,
-  Visibility,
-  VisibilityOff,
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
 const MobileContactForm = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   });
-  const [showPassword, setShowPassword] = useState(false);
   const [snackbar, setSnackbar] = useState({ 
     open: false, 
     message: '', 
@@ -83,6 +75,7 @@ const MobileContactForm = () => {
         throw new Error('Failed to send message');
       }
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Form submission error:', error);
       setSnackbar({
         open: true,

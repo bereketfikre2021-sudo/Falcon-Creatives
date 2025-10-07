@@ -6,7 +6,6 @@ import {
   Grid,
   Card,
   CardContent,
-  Avatar,
   useTheme,
   useMediaQuery,
 } from '@mui/material';

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Box, Skeleton } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
 
@@ -20,11 +20,13 @@ const OptimizedImage = ({
   });
 
   const handleImageLoad = () => {
+    // eslint-disable-next-line no-console
     console.log('Image loaded successfully:', src);
     setImageLoaded(true);
   };
 
   const handleImageError = (e) => {
+    // eslint-disable-next-line no-console
     console.error('Image failed to load:', src, e);
     setImageError(true);
     setImageLoaded(true);

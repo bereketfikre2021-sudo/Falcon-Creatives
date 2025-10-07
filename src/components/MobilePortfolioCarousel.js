@@ -6,8 +6,6 @@ import {
   CardContent,
   Chip,
   IconButton,
-  useTheme,
-  useMediaQuery,
 } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -19,8 +17,6 @@ import {
 import OptimizedImage from './OptimizedImage';
 
 const MobilePortfolioCarousel = ({ projects }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [currentProject, setCurrentProject] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);

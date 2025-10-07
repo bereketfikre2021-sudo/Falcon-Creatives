@@ -20,14 +20,14 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const texts = [
+  const texts = React.useMemo(() => [
     'Graphics Design',
     'Brand Identity',
     'Motion Graphics',
     'Video Editing',
     'Web Development',
     'Game Development'
-  ];
+  ], []);
   
   useEffect(() => {
     const timeout = setTimeout(() => {

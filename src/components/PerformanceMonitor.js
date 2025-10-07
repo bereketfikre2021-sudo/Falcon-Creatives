@@ -18,6 +18,7 @@ const PerformanceMonitor = () => {
       }
 
       // Log to console in development
+      // eslint-disable-next-line no-console
       console.log(metric);
     };
 
@@ -36,11 +37,13 @@ const PerformanceMonitor = () => {
         for (const entry of list.getEntries()) {
           // Monitor long tasks
           if (entry.entryType === 'longtask') {
+            // eslint-disable-next-line no-console
             console.warn('Long task detected:', entry);
           }
           
           // Monitor layout shifts
           if (entry.entryType === 'layout-shift' && !entry.hadRecentInput) {
+            // eslint-disable-next-line no-console
             console.warn('Layout shift detected:', entry);
           }
         }
@@ -50,6 +53,7 @@ const PerformanceMonitor = () => {
         observer.observe({ entryTypes: ['longtask', 'layout-shift'] });
       } catch (e) {
         // Some browsers don't support all entry types
+        // eslint-disable-next-line no-console
         console.log('Performance observer not fully supported');
       }
     }
@@ -60,6 +64,7 @@ const PerformanceMonitor = () => {
       const slowResources = resources.filter(resource => resource.duration > 1000);
       
       if (slowResources.length > 0) {
+        // eslint-disable-next-line no-console
         console.warn('Slow resources detected:', slowResources);
       }
     };

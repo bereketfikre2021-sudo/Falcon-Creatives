@@ -15,7 +15,7 @@ import {
   Container,
 } from '@mui/material';
 import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);

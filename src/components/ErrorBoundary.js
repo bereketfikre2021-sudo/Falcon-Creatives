@@ -5,7 +5,6 @@ import {
   Button,
   Container,
   Paper,
-  useTheme,
 } from '@mui/material';
 import { ErrorOutline, Refresh } from '@mui/icons-material';
 
@@ -23,6 +22,7 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 

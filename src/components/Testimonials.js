@@ -5,8 +5,6 @@ import {
   Container,
   Grid,
   Card,
-  CardContent,
-  Avatar,
   Rating,
   useTheme,
   useMediaQuery,
